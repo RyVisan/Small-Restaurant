@@ -11,7 +11,7 @@
                 @method('PUT')
                 @csrf
                 <div class="card">
-                    <div class="card-header">Update Food Category</div>
+                    <div class="card-header">Update Category <a href="{{ route('category.index') }}"><span class="float-right btn btn-outline-secondary">Back</span></a></div>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">Name</label>

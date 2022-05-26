@@ -10,11 +10,11 @@
             <form action="{{ route('category.store') }}" method="POST">
                 @csrf
                 <div class="card">
-                    <div class="card-header">Manage Food Category</div>
+                    <div class="card-header">Create Category <a href="{{ route('category.index') }}"><span class="float-right btn btn-outline-secondary">Back</span></a></div>
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" autocomplete="off">
+                            <input type="text" name="name" value="{{ old('name') }}" autofocus class="form-control @error('name') is-invalid @enderror" autocomplete="off">
                             @error('name')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
